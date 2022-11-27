@@ -1,0 +1,9 @@
+include ':material'
+include ':material'
+include ':Material Components'
+include ':helper'
+include ':domain'
+include ':data'
+include ':presentation'
+include ':app'
+rootProject.name = "Lastmin"

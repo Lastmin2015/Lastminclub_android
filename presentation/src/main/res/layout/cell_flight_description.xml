@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/min_margin"
+            >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/def_margin"
+                android:layout_marginEnd="@dimen/def_margin"
+                android:layout_centerVertical="true"
+                >
+
+            <ImageView
+                    android:id="@+id/iv_stop_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_travel_flight_horiz"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example_duration"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/SmallText"
+                    />
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="90dp"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toStartOf="@+id/iv_menu"
+                    android:layout_centerVertical="true"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/example_company"
+                        style="@style/DarkText"
+                        />
+
+                <TextView
+                        android:id="@+id/tv_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/example_class"
+                        style="@style/SmallText"
+                        />
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_24_black"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/def_margin"
+                    />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/lin_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="@dimen/big_margin"
+
+            >
+
+        <include
+                android:id="@+id/flight_no"
+                layout="@layout/layout_text_start_end"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seating_info"
+                style="@style/DarkText"
+                android:layout_marginTop="@dimen/min_margin_10"
+                />
+
+        <include
+                android:id="@+id/seat_pitch"
+                layout="@layout/layout_text_start_end"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        <include
+                android:id="@+id/seat_width"
+                layout="@layout/layout_text_start_end"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        <include
+                android:id="@+id/seat_recline"
+                layout="@layout/layout_text_start_end"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        <include
+                android:id="@+id/seat_audio_video"
+                layout="@layout/layout_text_start_end"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        <include
+                android:id="@+id/seat_power"
+                layout="@layout/layout_text_start_end"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        <include
+                android:id="@+id/seat_wifi"
+                layout="@layout/layout_text_start_end"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/def_margin"
+                />
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"
+            android:layout_marginTop="@dimen/min_margin_10"
+            />
+</LinearLayout>

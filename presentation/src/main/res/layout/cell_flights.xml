@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/DarkText"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:text="@string/example_date"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"
+            />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/big_margin_48"
+                android:paddingStart="@dimen/medium_margin"
+                >
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/lin_dest"
+                        >
+
+                    <TextView
+                            android:id="@+id/tv_city_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/example_flight_name_1"
+                            style="@style/DarkText.Big"
+                            android:layout_marginTop="@dimen/big_margin"
+                            />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_icon_travel_flight_horiz"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="@dimen/min_margin_10"
+                            android:layout_marginEnd="@dimen/min_margin_10"
+                            app:tint="@color/black"/>
+
+                    <TextView
+                            android:id="@+id/tv_city_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/example_flight_name_2"
+                            style="@style/DarkText.Big"
+                            android:layout_marginTop="@dimen/big_margin"
+                            />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example_duration"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/SmallText"
+                    android:layout_marginTop="@dimen/medium_margin"
+
+                    />
+
+            <RelativeLayout
+                    android:id="@+id/rel_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_time_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/example_time_start"
+                        android:layout_gravity="center_horizontal"
+                        style="@style/NormalText.Big"
+                        />
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tv_time_start"
+                        android:layout_toStartOf="@+id/tv_time_end"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginStart="@dimen/min_margin_10"
+                        android:layout_marginEnd="@dimen/min_margin_10"
+                        android:layout_alignTop="@+id/tv_time_start"
+                        android:layout_alignBottom="@+id/tv_time_start"
+                        >
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/grey"
+                            android:layout_centerVertical="true"
+                            />
+
+                    <LinearLayout
+                            android:id="@+id/lin_stops"
+                            android:layout_width="wrap_content"
+                            android:layout_height="26dp"
+                            android:orientation="horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="6dp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/min_margin"
+                            android:paddingEnd="@dimen/min_margin"
+                            android:layout_centerVertical="true"
+                            >
+
+                        <ImageView
+                                android:id="@+id/iv_stop_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_icon_travel_flight_horiz"
+                                android:layout_marginBottom="2dp"/>
+
+                        <ImageView
+                                android:id="@+id/iv_stop_inter_1"
+                                android:layout_width="5dp"
+                                android:layout_height="5dp"
+                                android:src="@drawable/shape_dot_green"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginStart="@dimen/min_margin_10"
+                                android:layout_marginEnd="@dimen/min_margin_10"/>
+
+                        <ImageView
+                                android:id="@+id/iv_stop_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_icon_travel_flight_horiz"
+                                android:layout_marginBottom="2dp"/>
+
+                        <ImageView
+                                android:id="@+id/iv_stop_inter_2"
+                                android:layout_width="5dp"
+                                android:layout_height="5dp"
+                                android:src="@drawable/shape_dot_green"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginStart="@dimen/min_margin_10"
+                                android:layout_marginEnd="@dimen/min_margin_10"/>
+
+                        <ImageView
+                                android:id="@+id/iv_stop_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_icon_travel_flight_horiz"
+                                android:layout_marginBottom="2dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <!--                <FrameLayout-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_toEndOf="@+id/lin_stops"-->
+                <!--                        android:layout_toStartOf="@+id/tv_time_end"-->
+                <!--                        android:layout_alignBottom="@+id/lin_stops"-->
+                <!--                        android:layout_alignTop="@+id/lin_stops"-->
+                <!--                        android:layout_marginBottom="3dp"-->
+                <!--                        android:layout_marginStart="@dimen/min_margin_10"-->
+                <!--                        android:layout_marginEnd="@dimen/min_margin_10"-->
+                <!--                        >-->
+
+                <!--                    <View-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="0.5dp"-->
+                <!--                            android:background="@color/grey"-->
+                <!--                            android:layout_gravity="center_vertical"-->
+                <!--                            />-->
+                <!--                </FrameLayout>-->
+
+                <TextView
+                        android:id="@+id/tv_time_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/example_time_end"
+                        android:layout_gravity="center_horizontal"
+                        style="@style/NormalText.Big"
+                        android:layout_alignParentEnd="true"
+                        />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_from_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/example_abb_start"
+                        style="@style/NormalText"
+                        />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        >
+
+                    <TextView
+                            android:id="@+id/tv_stops"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/example_stops"
+                            style="@style/GreenText.Small"
+                            />
+
+                    <TextView
+                            android:id="@+id/tv_stops_codes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/example_abb_stops"
+                            style="@style/SmallText"
+                            android:layout_marginTop="@dimen/min_margin"
+                            />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/tv_to_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/example_abb_end"
+                        style="@style/NormalText"
+                        android:layout_alignParentEnd="true"
+                        />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/min_margin_10"
+                android:layout_marginTop="112dp"
+                app:tint="@color/main_green"/>
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"
+            android:layout_marginTop="@dimen/big_margin"
+            />
+</LinearLayout>

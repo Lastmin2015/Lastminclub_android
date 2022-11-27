@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph_launch"
+            app:startDestination="@id/mainFragment">
+    <fragment android:id="@+id/mainFragment"
+              android:name="ru.vsibi.presentation.screens.main.MainFragment"
+              android:label="MainFragment">
+        <action
+                android:id="@+id/action_mainFragment_to_loginFragment"
+                app:destination="@id/loginFragment"/>
+        <action
+                android:id="@+id/action_mainFragment_self"
+                app:destination="@id/mainFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/nav_graph_launch"
+                app:popUpToInclusive="true"
+                />
+    </fragment>
+    <fragment android:id="@+id/loginFragment"
+              android:name="ru.vsibi.presentation.screens.login.LoginFragment"
+              android:label="LoginFragment">
+        <action
+                android:id="@+id/action_loginFragment_to_loginEmailFragment"
+                app:destination="@id/loginEmailFragment"/>
+        <action
+                android:id="@+id/action_loginFragment_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/nav_graph_launch"
+                app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:id="@+id/loginEmailFragment"
+              android:name="ru.vsibi.presentation.screens.login.emailVariant.email.LoginEmailFragment"
+              android:label="LoginEmailFragment">
+        <action
+                android:id="@+id/action_loginEmailFragment_to_loginPasswordFragment"
+                app:destination="@id/loginPasswordFragment"/>
+        <action
+                android:id="@+id/action_loginEmailFragment_to_createPassFragment"
+                app:destination="@id/createPassFragment"/>
+        <argument
+                android:name="isLogin"
+                app:argType="boolean"
+                android:defaultValue="true"/>
+    </fragment>
+    <fragment android:id="@+id/loginPasswordFragment"
+              android:name="ru.vsibi.presentation.screens.login.emailVariant.password.LoginPasswordFragment"
+              android:label="LoginPasswordFragment">
+        <argument
+                android:name="email"
+                app:argType="string"/>
+        <action
+                android:id="@+id/action_loginPasswordFragment_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/nav_graph_launch"
+                app:popUpToInclusive="true"
+                />
+        <action
+                android:id="@+id/action_loginPasswordFragment_to_forgotPassFragment"
+                app:destination="@id/forgotPassFragment"/>
+    </fragment>
+    <fragment android:id="@+id/forgotPassFragment"
+              android:name="ru.vsibi.presentation.screens.login.emailVariant.forgotPassword.ForgotPassFragment"
+              android:label="ForgotPassFragment">
+        <action
+                android:id="@+id/action_forgotPassFragment_to_createPassFragment"
+                app:destination="@id/createPassFragment"/>
+        <argument
+                android:name="email"
+                app:argType="string"/>
+    </fragment>
+    <fragment android:id="@+id/createPassFragment"
+              android:name="ru.vsibi.presentation.screens.login.emailVariant.createPassword.CreatePassFragment"
+              android:label="CreatePassFragment">
+        <action
+                android:id="@+id/action_createPassFragment_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/nav_graph_launch"
+                app:popUpToInclusive="true"/>
+        <argument
+                android:name="email"
+                app:argType="string"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/visibility"
+            android:icon="@drawable/ic_icon_travel_visibility"
+            app:showAsAction="always"
+            android:title="Visibility"/>
+</menu>

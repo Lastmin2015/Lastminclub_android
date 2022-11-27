@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+            android:id="@+id/rel_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@color/white"
+                android:layout_marginStart="@dimen/def_margin"
+                android:layout_marginTop="@dimen/def_margin"
+                />
+
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/WhiteText.Small"
+                android:textAllCaps="true"
+                android:text="Departure Date &amp; Duration"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/def_margin"
+                android:layout_below="@+id/btn_cancel"
+                />
+
+        <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/WhiteText.Big"
+                android:text="Tue, Nov 17"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/def_margin"
+                android:layout_below="@+id/title"
+                android:layout_marginBottom="@dimen/def_margin"
+                />
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_icon_content_create_24_px"
+                android:tint="@color/white"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/big_margin"
+                android:layout_alignBottom="@+id/tv_date"
+                android:layout_marginBottom="@dimen/min_margin"
+                />
+
+
+        <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/WhiteText"
+                android:text="Save"
+                android:textAllCaps="true"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginTop="@dimen/def_margin"
+                android:layout_marginBottom="@dimen/def_margin"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/def_margin"
+                />
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/rel_head"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:weightSum="2"
+            >
+
+        <LinearLayout
+                android:id="@+id/rel_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_departure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Departure Date"
+                    style="@style/DarkText"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:layout_marginStart="22dp"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/min_margin_10"
+                    android:layout_marginStart="@dimen/def_margin"
+                    >
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/range_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+/- 3 Days"
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/range_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+/- 5 Days"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/rel_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    style="@style/DarkText"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:layout_marginStart="22dp"                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/min_margin_10"
+                    android:layout_marginStart="@dimen/def_margin"
+                    >
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/duration_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About a Week"
+                            />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/duration_2_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About 2 Weeks"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            style="@style/stroke"
+            android:layout_marginStart="@dimen/def_margin"
+            android:layout_marginEnd="@dimen/def_margin"
+            android:layout_marginTop="@dimen/def_margin"
+            app:layout_constraintTop_toBottomOf="@+id/lin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    <FrameLayout
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingStart="@dimen/def_margin"
+            android:paddingEnd="@dimen/def_margin"
+            android:paddingLeft="@dimen/def_margin"
+            android:paddingRight="@dimen/def_margin"
+            />
+
+
+<!--    <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            android:layout_marginEnd="32dp"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:id="@+id/linearLayout">-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/btn_cancel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                style="@style/GreenText"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:text="Cancel"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/btn_ok"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                style="@style/GreenText"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:text="Ok"-->
+<!--                android:layout_marginStart="@dimen/big_margin"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                />-->
+<!--    </LinearLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

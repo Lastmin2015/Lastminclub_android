@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?android:actionBarSize">
+
+    <RelativeLayout
+            android:id="@+id/rl_adult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center_vertical"
+            >
+
+        <TextView
+                android:id="@+id/tv_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adults"
+                android:layout_marginStart="@dimen/big_margin"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_toStartOf="@id/lin_adults_counter"
+                android:layout_alignParentStart="true"
+                />
+
+        <LinearLayout
+                android:id="@+id/lin_adults_counter"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/tv_checked"
+                android:gravity="bottom|end"
+                android:layout_marginEnd="@dimen/big_margin"
+                >
+
+            <TextView
+                    android:id="@+id/tv_adult_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"
+                    />
+
+
+            <ImageButton
+                    android:id="@+id/ib_adult_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_remove_24"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="@dimen/big_margin"
+                    />
+
+            <ImageButton
+                    android:id="@+id/ib_adult_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="@dimen/big_margin"
+                    />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rel_childs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_adult"
+            android:layout_marginTop="48dp"
+            android:gravity="center_vertical"
+            >
+
+        <TextView
+                android:id="@+id/tv_childs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/children"
+                android:layout_marginStart="@dimen/big_margin"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_toStartOf="@id/lin_childs_counter"
+                android:layout_alignParentStart="true"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/child_period"
+                android:layout_marginStart="@dimen/big_margin"
+                style="@style/SmallText"
+                android:layout_toStartOf="@id/lin_childs_counter"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_childs"
+                />
+
+        <LinearLayout
+                android:id="@+id/lin_childs_counter"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/tv_childs"
+                android:gravity="end|bottom"
+                android:layout_marginEnd="@dimen/big_margin"
+                >
+
+            <TextView
+                    android:id="@+id/tv_child_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"
+                    />
+
+
+            <ImageButton
+                    android:id="@+id/ib_child_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_remove_24"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="@dimen/big_margin"
+
+                    />
+
+            <ImageButton
+                    android:id="@+id/ib_child_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="@dimen/big_margin"
+                    />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_childs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel_childs"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/large_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/def_margin"
+            >
+
+        <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:background="@android:color/transparent"
+                android:textColor="@color/main_green"
+                />
+
+        <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:background="@android:color/transparent"
+                android:textColor="@color/main_green"
+                />
+    </LinearLayout>
+</RelativeLayout>

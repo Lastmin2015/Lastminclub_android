@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "839600337584",
+    "project_id": "lastmin-club",
+    "storage_bucket": "lastmin-club.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839600337584:android:eb472aa3714f243fdc4175",
+        "android_client_info": {
+          "package_name": "ru.vsibi.lastmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839600337584-gi3rflof9glmbdf6uebg1fhdptjpvp2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOmo7jI0uJc68udfdAeg1YiJW-n40aW7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839600337584-gi3rflof9glmbdf6uebg1fhdptjpvp2s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "839600337584-1mgs05of6vpbu5vn7224ut0ragulvb8u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tv.lastmin.lastminclub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

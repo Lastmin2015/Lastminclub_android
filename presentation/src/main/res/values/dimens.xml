@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_margin">16dp</dimen>
+    <dimen name="large_margin">64dp</dimen>
+    <dimen name="big_margin_48">48dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+    <dimen name="medium_margin">20dp</dimen>
+    <dimen name="min_margin">5dp</dimen>
+    <dimen name="min_margin_10">10dp</dimen>
+</resources>

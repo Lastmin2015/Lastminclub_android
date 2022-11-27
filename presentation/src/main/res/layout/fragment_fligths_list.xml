@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize"
+        android:orientation="vertical"
+        >
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SmallText"
+            android:text="@string/example_adult_kid"
+            android:layout_marginStart="@dimen/def_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginEnd="@dimen/def_margin"
+            android:layout_marginBottom="@dimen/def_margin"
+            />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_flights"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="-16dp"
+            />
+
+</LinearLayout>

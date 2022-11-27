@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin">
+
+    <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mastercard"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/def_margin"
+            android:layout_toStartOf="@+id/iv_check"
+            >
+        <TextView
+                android:id="@+id/tv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DarkText"
+                android:text="@string/example_card_number"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/example_card_expire"
+                android:text="@string/example_card_expiry"
+                android:layout_marginTop="@dimen/min_margin"
+                />
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/iv_check"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_check_circle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            style="@style/stroke"
+            android:layout_below="@+id/iv_icon"
+            android:layout_marginTop="@dimen/medium_margin"
+            />
+</RelativeLayout>

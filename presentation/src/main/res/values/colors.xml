@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey">#9E9E9E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_2">#f5f5f5</color>
+    <color name="pink">#df248d</color>
+    <color name="black">#000000</color>
+    <color name="black_75">#BF000000</color>
+    <color name="black_87">#de000000</color>
+    <color name="black_38">#61000000</color>
+    <color name="main_green">#009d97</color>
+    <color name="text_input_layout_color">#f2f3f3</color>
+    <color name="clr_error">#CF6679</color>
+</resources>

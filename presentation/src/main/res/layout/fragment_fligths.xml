@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GreenText.Small"
+                android:text="@string/general"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                />
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/DarkText"
+                    android:text="@string/add_nearby_airports"
+                    android:layout_centerVertical="true"
+                    />
+
+            <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"
+                android:layout_marginTop="@dimen/def_margin"
+                />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GreenText.Small"
+                android:text="@string/search"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                />
+
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/min_margin_10"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                >
+
+            <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/best"
+                    style="@style/DarkText"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    />
+
+            <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cheapest"
+                    style="@style/DarkText"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    />
+
+            <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quickest"
+                    style="@style/DarkText"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    />
+        </RadioGroup>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"
+                android:layout_marginTop="@dimen/def_margin"
+                />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GreenText.Small"
+                android:text="@string/baggage"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <TextView
+                    android:id="@+id/tv_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checked"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_toStartOf="@id/lin_adults_counter"
+                    android:layout_alignParentStart="true"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/lin_adults_counter"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@+id/tv_checked"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/def_margin"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_adult_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                <ImageButton
+                        android:id="@+id/ib_adult_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_remove_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+
+                <ImageButton
+                        android:id="@+id/ib_adult_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin"
+                >
+
+            <TextView
+                    android:id="@+id/tv_cabin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cabin"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_toStartOf="@id/lin_cabin_counter"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/lin_cabin_counter"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@+id/tv_cabin"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/def_margin"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_cabin_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                <ImageButton
+                        android:id="@+id/ib_cabin_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_remove_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+
+                <ImageButton
+                        android:id="@+id/ib_cabin_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"
+                android:layout_marginTop="@dimen/def_margin"
+                />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GreenText.Small"
+                android:text="@string/route"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin"
+                />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration_max"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:layout_marginTop="@dimen/def_margin"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_toStartOf="@id/lin_duration_counter"
+                    android:layout_alignParentStart="true"
+                    android:singleLine="true"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hours"
+                    android:layout_marginStart="@dimen/big_margin"
+                    style="@style/SmallText"
+                    android:layout_below="@+id/tv_duration"
+                    android:layout_toStartOf="@id/lin_duration_counter"
+                    android:layout_alignParentStart="true"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/lin_duration_counter"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/def_margin"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_duration_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                <ImageButton
+                        android:id="@+id/ib_duration_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_remove_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+
+                <ImageButton
+                        android:id="@+id/ib_duration_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <TextView
+                    android:id="@+id/tv_stops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stops_max"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_toStartOf="@id/lin_stops_counter"
+                    android:layout_alignParentStart="true"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/lin_stops_counter"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@+id/tv_stops"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/def_margin"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_stops_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        />
+
+
+                <ImageButton
+                        android:id="@+id/ib_stops_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_remove_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+
+                <ImageButton
+                        android:id="@+id/ib_stops_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_24"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"
+                android:layout_marginTop="@dimen/big_margin"
+                />
+
+        <LinearLayout
+                android:id="@+id/lin_exclude_countries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                >
+
+            <TextView
+                    android:id="@+id/tv_exclude_countries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exclude_countries"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/big_margin"
+                    style="@style/SmallText"
+                    />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

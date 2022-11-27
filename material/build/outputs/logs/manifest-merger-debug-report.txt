@@ -1,0 +1,21 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml:16:1-20:12
+INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml:16:1-20:12
+INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml:16:1-20:12
+	package
+		ADDED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml:17:5-42
+		INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
+		INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml:16:11-69
+application
+ADDED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml:19:3-17
+uses-sdk
+INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
+INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
+		ADDED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
+		INJECTED from C:\Users\SetupPC\StudioProjects\Lastmin\material\java\com\google\android\material\AndroidManifest.xml
